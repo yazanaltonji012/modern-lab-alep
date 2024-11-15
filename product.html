@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <link href="microscope.png" rel="icon">
+        <meta charset="utf-8">
+        <title id="s">Loading...</title>
+        <style>
+            *{
+                padding:0px;
+                margin: 0px;
+            }
+            
+            body{
+                margin: 0px;
+                background-color: white;
+            }
+            .ptitle{
+                margin: 5px;
+                }
+           .sb-p{
+               margin: 0px;
+               display: flex;
+               flex-flow: wrap row;
+               flex-shrink: initial;
+               background-color: white;
+               justify-content: space-evenly;
+               align-items: center;
+               box-shadow: 1px 1px 5px rgb(0, 0, 1)
+           }
+           .sb-i{
+               padding: 0px;
+               margin: 10px;
+               display: flex;
+               flex-flow: column-reverse wrap;
+               align-items: center;
+           }
+           a{
+            list-style-type: none;
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+            font-style: italic;
+            margin-top: 5px;
+           }
+           .sb-i:hover{
+               font-size: 24px;
+               border-bottom: royalblue 2px solid;
+           }
+        .product{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+        .product-i{
+            margin: 10px;
+            margin-top: 20px;
+            padding: 5px;
+            display: flex;
+            flex-flow: column wrap;
+        }
+        .prod-d{
+            display: flex;
+            flex-flow: column nowrap;
+            width: 47%;
+            height: 50%;
+        }
+        .product-d{
+          /*  margin: 0 auto;*/
+            margin-top: 25px;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            overflow: auto;
+            float: left;
+            border-radius: 10px;
+        }
+        .container{
+            padding: 5px;
+            width: 500px;
+            margin: 10px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            overflow: scroll;
+            overflow-y: hidden;
+            align-items: center;
+        }
+        .container::-webkit-scrollbar{
+            display: none;
+        }
+        .area{
+            margin: 5px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+        }
+        #img{
+            border-radius: 10px;
+            margin: 0 auto;
+            width: 500px;
+            height: 400px;
+            box-shadow: 1px 1px 5px rgb(0, 0, 1);
+        }
+        #img1,#img2,#img3,#img-video{
+            padding: 5px;
+            margin: 5px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px rgb(0, 0, 1);
+        }
+        #img1:hover,#img2:hover,#img3:hover,#img-video:hover{
+            box-shadow: 2px 2px 10px royalblue;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        #video{
+            padding: 5px;
+            margin: 5px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px rgb(0, 0, 1);
+        }
+        #back:hover,#next:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+            opacity: 80%;
+        }
+        .selected{
+            border: 2px solid black;
+            opacity: 80%;
+        }
+    .whats{
+	margin: 0 auto;
+	position: fixed;
+	width: 450px;
+	top: 50%; /* تحديد المسافة من الأعلى */
+	left: 50%; /* تحديد المسافة من اليمين */
+	transform: translate(-50%, -50%);
+	height: 150px;
+	background-color: white;
+	box-shadow: 10px 10px 40px rgb(0, 0, 1);
+	border-radius: 20px;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+}
+    .bttn-prodct{
+        width: 60%;
+        padding: 5px;
+        margin: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        }
+    .share{
+	margin: 0 auto;
+	position: fixed;
+	width: 450px;
+	top: 50%; /* تحديد المسافة من الأعلى */
+	left: 50%; /* تحديد المسافة من اليمين */
+	transform: translate(-50%, -50%);
+	height: 150px;
+	background-color: white;
+	box-shadow: 20px 20px 80px rgb(0, 0, 1);
+	border-radius: 20px;
+}
+.sharebttn{
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+    transform: translate(3%,50%);
+	align-content: center;
+}
+.divs:hover,.divs2:hover,.divs3:hover{
+	box-shadow: 1px 1px 10px 1px rgb(0, 0, 1);
+	border-radius: 10px;
+	transform:scale(1.04);
+	opacity: 90%;
+	font-size: 20px;
+	color: royalblue;
+    cursor: pointer;
+}
+#img5:hover{
+	border-radius: 8px;
+	transform:scale(1.4);
+	opacity: 90%;
+    box-shadow: 1px 1px 10px 1px rgb(0, 0, 1);
+    cursor: pointer;
+}
+#img3-2-1:hover,#img3-2-2:hover,#img3-2-3:hover,#img3-2-4:hover,#img3-2-5:hover,#img3-3:hover,#img3-2-6:hover,#img3-2-7:hover,#img3-2-8:hover{
+	box-shadow: 1px 1px 5px 1px royalblue;
+	opacity: 80%;
+	transform:scale(1.1);
+    border-radius: 40%;
+    cursor: pointer;
+}
+#img3-1:hover,#close:hover{
+box-shadow: 1px 1px 5px 1px royalblue;
+opacity: 80%;
+transform:scale(1.1);
+border-radius: 40%;
+cursor: pointer;
+}
+.foot{
+	margin: 0 auto;
+	padding: 5px;
+	background-color: royalblue;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around; 
+	width: 60%;
+}
+.related{
+font-family:'Roboto', sans-serif;;
+line-height: 1.6;
+font-size: 20px;
+font-weight: 300;
+}
+.related-it:hover{
+box-shadow: 1px 1px 5px 1px royalblue;
+border-radius: 10px;
+transform:scale(1.04);
+cursor: pointer;
+margin: 5px;
+}
+
+        </style>
+    </head>
+
+    <body>
+      <div class="sb-p">
+    <div class="sb-i">
+        <a href="#myaccount">حسابي</a>
+        <img src="profile.png" width="30px" height="30px"> 
+    </div>
+    <div class="sb-i">
+        <a href="index.html"> العودة للصفحة</a>
+        <img src="home.png" width="30px" height="30px"> 
+    </div>
+    <img src="title.jpg" alt="modern lab" width="200px" height="110px" class="ptitle">
+
+      </div>
+        <div class="main">
+            <div class="product">
+                <div class="product-i">
+                    <img width="auto" height="390px" alt="main product" id="img">
+                    <h3 id="fonttitle" style="font-size: 25px;color: black; font-weight: 600;margin: 5px;" align="center">Loading...</h3>
+                </div>
+        <div class="prod-d">
+        <div class="product-d">
+        <h2 style="font-size:45px; color:black; margin:5px; font-weight: 600 ;margin-right:auto;margin-bottom: 0px;" id="price">Loading...SP</h2>
+        <p  align = "left" style="color : blue; opacity : 60%; margin :5px; margin-right:auto;">يتوفر من هذا المنتج  10 قطع</p>
+        <p style="font-family:cursive; font-size:20px; font-weight: 600" id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quod iusto rerum delectus architecto, sit incidunt vero
+        reiciendis debitis facere, tenetur harum. Dolores quia nihil odio inventore dolorem necessitatibus! Pariatur Lorem
+        ipsum dolor sit amet consectetur, adipisicing elit. In eius magni fugit autem. At nam nesciunt laudantium consectetur
+        ex. Quaerat tenetur aut laboriosam reprehenderit neque exercitationem doloribus culpa, quasi beatae. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Porro eius labore ea saepe nam omnis illum natus eligendi accusamu </p>
+        <div class="bttn-prodct">
+        <div>
+            <img src="whatsapp.png" onclick="prod()" id="img3-1" width="35px" height="30px">
+            <h4 align="center">محادثة</h4>
+        </div>
+        <div>
+            <img src="heart.png" id="img3-2-1" onclick="heartp()" alt="herat" width="35px" height="30px">
+            <h4 align="center" id="like">اعجاب</h4>
+        </div>
+        <div>
+            <img src="share.png" id="img3-3" alt="share" onclick="share()" width="35px" height="30px">
+            <h4 align="center">مشاركة</h4>
+        </div>
+
+    </div>
+</div>
+<article class="area">
+    <img src="back.png" id="back" width="20px" height="25px" style="margin:5px; padding:5px; opacity: 80%; position: relative; top: 45px;">
+    <div class="container">
+        <img width="120px" height="100px" alt="product" id="img1">
+        <img width="120px" height="100px" alt="product" id="img2">
+        <img width="120px" height="100px" alt="product" id="img3">
+        <img width="120px" height="100px" alt="product" id="img4">
+        <img width="120px" height="100px" alt="product" id="img-video" src="video image.png">
+        <source src="Project Building Part 5- Instagram Clone.webm" id="src">
+    </div>
+    <img src="next.png" id="next" width="20px" height="25px" style="margin:5px; padding:5px; opacity: 80%; position: relative; top: 45px;">
+</article>
+                </div>
+            </div>
+            <p style="font-size:30px; margin:5px; color: black; font-weight: 600; " align = "center">عناصر قد تعجبك</p>
+            
+            <span class="product" style="margin-top:15px; box-shadow:1px 1px 3px  rgb(0, 0, 1); padding:10px;">
+            <div class="related-it" onclick="mezan()">
+                <img src="./images/mezan1.jpg" width="210px" height="200px" style="box-shadow:1px 1px 10px rgb(0, 0, 1); border-radius:10px;">
+                <h5 class="related" align= "center">ميزان دقيق</h5>
+                <h6 align="center" style="color:blue; opacity:85%;">يتوفر من هذا المنتج 10 قطع</h6>
+            </div>
+           <div class="related-it" onclick="mezan()">
+                <img src="./images/mezan1.jpg" width="210px" height="200px" style="box-shadow:1px 1px 10px rgb(0, 0, 1); border-radius:10px;">
+                <h5 class="related" align= "center">ميزان دقيق</h5>
+                <h6 align="center" style="color:blue; opacity:85%;">يتوفر من هذا المنتج 99 قطع</h6>
+            </div>
+            <div class="related-it" onclick="analysergermany()">
+                <img src="./images/analyser-3.jpg" width="210px" height="200px" style="box-shadow:1px 1px 10px rgb(0, 0, 1); border-radius:10px;">
+                <h5 class="related" align= "center" >محلل الماني</h5>
+                <h6 align="center" style="color:blue; opacity:85%;">يتوفر من هذا المنتج 6 قطع</h6>
+            </div>
+            <div class="related-it" onclick="analyserchinese()">
+                <img src="./images/analyser-2.jpg" width="210px" height="200px" style="box-shadow:1px 1px 10px rgb(0, 0, 1); border-radius:10px;">
+                <h5 class="related" align= "center">محلل صيني</h5>
+                <h6 align= "center" style="color:blue; opacity:85%;">يتوفر من هذا المنتج 10 قطع</h6>
+            </div>
+        </div>
+    </span>
+
+        </div>
+    </body>
+<script src="./module/location.js"></script>
+<script src="./module/container.js"></script>
+<script src="./module/replace-img.js"></script>
+<script src="./module/share.js"></script>
+<script src="./module/photo.js"></script>
+	<footer style="background-color: royalblue; margin:10px 0px 0px 0px; padding:5px; height:100%;" >
+            <div class="footer">
+             <h3 align="center">تابعنا على مواقع التواصل</h3>
+                <div class="foot">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="facebook.png" alt="facebook" width="50px" height="50px"/>
+                        <h5 align = "center" class="related">فيسبوك</h5>
+                    </a>
+                    <a href="https://web.telegram.org/" target="_blank">
+                        <img src="telegram.png" alt="Telegram" width="50px" height="50px"/>
+                        <h5 align = "center" class="related">تلجرام</h5>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="instagram.png" alt="instagram" width="50px" height="50px"/>
+                        <h5 align = "center" class="related">انستاغرام</h5>
+                    </a>
+               </div>
+            </div>
+            <p align="center">Copyright © 2024 Electronic Modern Lab Store</p>
+            <p align="center">تم هذا الموقع بواسطة المبرمج يزن التنحي للتواصل على الرقم 0950083544 </p>
+        </footer>
+</html>
+<script >
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBHZExVd1EFsliRXJDpulk0oesR1zGPlAo",
+            authDomain: "modern-lab-alep.firebaseapp.com",
+            projectId: "modern-lab-alep",
+            storageBucket: "modern-lab-alep.appspot.com",
+            messagingSenderId: "375483737715",
+            appId: "1:375483737715:web:553eb6e6e7d41097116c06",
+            measurementId: "G-X1LKPQJ66K"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+</script>

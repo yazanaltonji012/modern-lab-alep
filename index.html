@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+  <html lang="ar">
+  <head>
+    <link href="microscope.png" rel="icon">
+    <meta charset="utf-8">
+    <title>Modern Lab</title>
+    <link rel="stylesheet" href="wstyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  </head>
+    <body>
+      <div class="sb-p">
+        <div class="sb-i">
+          <a href="#call/us" id="callus">اتصل بنا</a>
+          <img src="./call.png" width="30px" height="30px">
+        </div>
+        <div class="sb-i">
+          <a href="#account" id="account">حسابي</a>
+          <img src="./profile.png" width="30px" height="30px">
+        </div>
+        <div class="sb-i">
+          <a href="#offers" id="offers">العروض</a>
+          <img src="./products.png" width="30px" height="30px">
+        </div>
+        <div class="sb-i">
+          <a href="./index.html">الصفحة الرئيسية</a>
+          <img src="./home.png" width="30px" height="30px">
+        </div>
+        <div class="search-bar">
+          <input id="search" placeholder="Search" onkeyup="searchbar(this.value)">
+          <img src="./search.png" id="img1" width="25px" height="25px">
+        </div>
+        <div>
+          <img src="title.jpg" alt="modern lab" width="200px" height="120px" class="title">
+        </div>
+        <script src="./module/searche.js">
+        </script>
+    
+    
+      </div>
+      <div class="main">
+        <h1 style="padding: 10px;" align="center">اجهزة تحليل</h1>
+        <fieldset class="products">
+    
+          <article class="product-i" id="ash">
+            <div class="cont" onclick="analysersweden()">
+              <img id="img2" src="images/analyser-3.jpg">
+              <h3 align="center" class="name">Analyser Sweden</h3>
+            </div>
+            <div class="bttn-prodct">
+              <script src="./module/replace-img.js"></script>
+              <script src="./module/share.js"></script>
+              <div>
+                <img src="whatsapp.png" onclick="completeAS()" id="img3-1" alt="AnalyserSweden">
+                <h4 align="center">محادثة</h4>
+              </div>
+              <div>
+                <img src="heart.png" id="img3-2-1" onclick="heart1()" alt="herat">
+                <h4 id="like" align="center">اعجاب</h4>
+              </div>
+              <div>
+                <img src="share.png" id="img3-3" alt="share" onclick="share()">
+                <h4 align="center">مشاركة</h4>
+              </div>
+            </div>
+            <p class="price" align="center">2000000SP</p>
+          </article>
+    
+          <article class="product-i" id="ash">
+            <div class="cont" onclick="analysergermany()">
+              <img id="img2" src="images/analyser-2.jpg">
+              <h3 align="center" class="name">Analyser germany</h3>
+            </div>
+            <div class="bttn-prodct">
+              <div>
+                <img src="whatsapp.png" onclick="completeAG()" id="img3-1" alt="AnalyserGermany">
+                <h4 align="center">محادثة</h4>
+              </div>
+              <div>
+                <img src="heart.png" id="img3-2-2" onclick="heart2()" alt="herat">
+                <h4 align="center" id="like1">اعجاب</h4>
+              </div>
+              <div>
+                <img src="share.png" id="img3-3" alt="share" onclick="share()">
+                <h4 align="center">مشاركة</h4>
+              </div>
+            </div>
+            <p class="price" align="center" id="name">5000000SP</p>
+          </article>
+    
+          <article class="product-i" id="ash">
+            <div class="cont" onclick="analyserchinese()">
+              <img id="img2" src="images/analyser.jpg">
+              <h3 align="center" class="name">Analyser chinese</h3>
+            </div>
+            <div class="bttn-prodct">
+              <div>
+                <img src="whatsapp.png" onclick="completeACH()" id="img3-1" alt="AnalyserChinese">
+                <h4 align="center">محادثة</h4>
+              </div>
+              <div>
+                <img src="heart.png" id="img3-2-3" onclick="heart3()" alt="herat">
+                <h4 align="center" id="like2">اعجاب</h4>
+              </div>
+              <div>
+                <img src="share.png" id="img3-3" alt="share" onclick="share()">
+                <h4 align="center">مشاركة</h4>
+              </div>
+            </div>
+            <p class="price" align="center">400000SP</p>
+          </article>
+    
+    
+        </fieldset>
+        <h1 style="padding: 10px;" align="center">منتجات حول الميزان الدقيق</h1>
+        <fieldset class="products">
+    
+          <article class="product-i">
+            <div class="cont" onclick="mezan()">
+              <img id="img2" src="images/mezan4.jpg">
+              <h3 align="center" class="name">ميزان دقيق</h3>
+            </div>
+            <div class="bttn-prodct">
+              <div>
+                <img src="whatsapp.png" onclick="completeMZN()" id="img3-1" alt="ميزان/دقيق">
+                <h4 align="center">محادثة</h4>
+              </div>
+              <div>
+                <img src="heart.png" onclick="heart4()" id="img3-2-4" alt="herat">
+                <h4 align="center" id="like3">اعجاب</h4>
+              </div>
+              <div>
+                <img src="share.png" id="img3-3" alt="share" onclick="share()">
+                <h4 align="center">مشاركة</h4>
+              </div>
+            </div>
+            <p class="price" align="center">340000SP</p>
+          </article>
+        </fieldset>
+    
+        <script src="./module/href.js"></script>
+        <script src="./module/location.js"></script>
+      </div>
+      <footer style="background-color: royalblue;">
+        <div class="footer">
+          <h3 align="center">تابعنا على مواقع التواصل</h3>
+          <div class="foot">
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="facebook.png" alt="facebook" width="50px" height="50px" />
+              <h5 align="center" class="name">فيسبوك</h5>
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="telegram.png" alt="Telegram" width="50px" height="50px" />
+              <h5 align="center" class="name">تليجرام</h5>
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="instagram.png" alt="instagram" width="50px" height="50px" />
+              <h5 align="center" class="name">انستاغرام</h5>
+            </a>
+          </div>
+        </div>
+        <p align="center">Copyright © 2024 Electronic Modern Lab Store</p>
+        <p align="center">تم هذا الموقع بواسطة المبرمج يزن التنحي للتواصل على الرقم 0950083544 </p>
+      </footer>
+    </body>
+    
+    </html>

@@ -1,0 +1,242 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+.title{
+	padding: 5px;
+	
+}
+.sb-p{
+	background-color:white;
+	display: flex;
+	flex-flow: row wrap-reverse;
+	align-items: center;
+	justify-content: space-evenly;
+	box-shadow: 1px 1px 5px 1px black;
+}
+.sb-i{
+	display: flex;
+	flex-flow: column-reverse wrap;
+	font-style: oblique;
+	font-weight: 550;
+	font-size: 20px;
+	align-items: center;
+}
+.sb-i:hover{
+	border-bottom: royalblue solid 2px;
+	font-size: 23px;
+}
+a{
+	list-style: none;
+	color: black;
+	text-decoration: none;
+	margin-top: 5px;
+}
+#img1{
+	border-radius: 50%;
+	position: relative;
+	right: 70px;
+	bottom: 10px;
+	padding: 10px;
+	margin:10px;
+}
+.products{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+.product-i{
+	padding: 10px;
+	margin: 10px;
+	border: none;
+	box-shadow: 1px 1px 10px 1px #888;
+	border-radius: 10px;
+	background-color: white;
+	width: 370px;
+	height: 340px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#img2{
+	padding: 0px;
+	margin: 0px;
+	width: 340px;
+	height: 240px;
+}
+.cont:hover {
+box-shadow: 1px 1px 10px 1px royalblue;
+transform:scaleX(1.04);
+opacity: 90%;
+font-size: 20px;
+color: royalblue;
+cursor: pointer;
+}
+.bttn-prodct{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+#img3-1{
+    padding: 5px;
+    margin-bottom: 10px;
+	width: 35px;
+	height: 30px;
+	position: relative;
+	top: 10px;
+}
+#img3-a{
+	padding: 5px;
+    margin-bottom: 10px;
+	width: 35px;
+	height: 30px;
+	position: relative;
+	top: 10px;
+	animation-name: imagec;
+	animation-duration: 1s;
+}
+#img3-2-1,#img3-2-2,#img3-2-3,#img3-2-4,#img3-2-5,#img3-2-6,#img3-2-7,#img3-2-8{
+    padding: 5px;
+    margin-bottom: 10px;
+	width: 35px;
+	height: 30px;
+	position: relative;
+	top: 10px;
+ 
+}
+#img3-3{
+    padding: 5px;
+    margin-bottom: 10px;
+	width: 35px;
+	height: 30px;
+	position: relative;
+	top: 10px;
+
+}
+#img3-2-1:hover,#img3-2-2:hover,#img3-2-3:hover,#img3-2-4:hover,#img3-2-5:hover,#img3-3:hover,#img3-2-6:hover,#img3-2-7:hover,#img3-2-8:hover{
+	box-shadow: 1px 1px 5px 1px royalblue;
+	opacity: 80%;
+	transform:scale(1.1);
+	border-radius: 40%;
+	cursor: pointer;
+}
+#img3-1:hover{
+box-shadow: 1px 1px 5px 1px royalblue;
+opacity: 80%;
+transform:scale(1.1);
+border-radius: 40%;
+cursor: pointer;
+}
+
+.price{
+	color: green;
+	font-size: 21px;
+	opacity: 80%;
+}
+.search-bar{
+margin: 10px;
+display: flex;
+flex-flow: row wrap-reverse;
+}
+#search{
+margin: 20px;
+padding: 5px;
+width: 200px;
+height: 30px;
+color: black;
+border-radius: 10px;
+animation-name: search;
+animation-duration: 1.5s;
+font-size: 16px;
+}
+@keyframes search{
+from{
+width: 20px;
+}
+to{
+width: 200px
+}
+}
+@keyframes imagec{
+	from{
+width: 0px;
+height: 10px;
+	}
+	to{
+width: 35px;
+height: 30px;
+	}
+}
+.share{
+	margin: 0 auto;
+	position: fixed;
+	width: 450px;
+	top: 50%; /* تحديد المسافة من الأعلى */
+	left: 50%; /* تحديد المسافة من اليمين */
+	transform: translate(-50%, -50%);
+	height: 150px;
+	background-color: white;
+	box-shadow: 20px 20px 80px rgb(0, 0, 1);
+	border-radius: 20px;
+}
+.sharebttn{
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+    transform: translate(3%,50%);
+	align-content: center;
+}
+.divs:hover,.divs2:hover,.divs3:hover{
+	box-shadow: 1px 1px 10px 1px rgb(0, 0, 1);
+	border-radius: 10px;
+	transform:scale(1.04);
+	opacity: 90%;
+	font-size: 20px;
+	color: royalblue;
+	cursor: pointer;
+}
+#img5:hover{
+	border-radius: 8px;
+	transform:scale(1.4);
+	opacity: 90%;
+	box-shadow: 1px 1px 10px 1px rgb(0, 0, 1);
+	cursor: pointer;
+}
+@media screen and (max-width:800px){
+	.sb-i{
+	 display: none;
+	}
+}
+.whats{
+	margin: 0 auto;
+	position: fixed;
+	width: 450px;
+	top: 50%; /* تحديد المسافة من الأعلى */
+	left: 50%; /* تحديد المسافة من اليمين */
+	transform: translate(-50%, -50%);
+	height: 150px;
+	background-color: white;
+	box-shadow: 10px 10px 40px rgb(0, 0, 1);
+	border-radius: 20px;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+}
+.foot{
+	margin: 0 auto;
+	padding: 5px;
+	background-color: royalblue;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	width: 60%;
+}
+.name{
+font-family:'Roboto', sans-serif;;
+line-height: 1.0;
+font-size: 20px;
+font-weight: 300;
+}
