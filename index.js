@@ -27,17 +27,17 @@ mongose.connect(url,{
 console.log("an error when conected to date base : "+err)
 })
 
-app.listen("https://modern-lab-alepp.web.app", () => {
+app.listen("3000", () => {
     console.log("connected to server 3000 succesfully")
 })
 // الحصول على جميع المنتجات  
-exports.getproduct = functions.https.onRequest(async (req, res)=> {
+app.get("/products",async (req, res)=> {
     const products = await Product.find();
     res.send(products);
 });
 
 // إضافة منتج جديد  
-exports.newProduct = functions.https.onRequest( async(req, res)=> {
+app.get("/product",async(req, res)=> {
     const { name, price, description,storage } = req.body;
 
     try {
@@ -49,7 +49,7 @@ exports.newProduct = functions.https.onRequest( async(req, res)=> {
     } 
 });
 //البحث عن المنتج بواسطة الاسم 
-exports.findproduct = functions.https.onRequest(async (req, res) => {
+app.get("/productbyname",async (req, res) => {
     const name = req.params.nam;
     const spectifyid = "66f4293c73764c2e4ad765a6"
         const products = await Product.findOne({name});
@@ -62,7 +62,7 @@ exports.findproduct = functions.https.onRequest(async (req, res) => {
 })
 
 // معالجة إعجاب لمنتج  
-exports.likes = functions.https.onRequest(async (req, res) => {
+app.get("/like",async (req, res) => {
     try {
         const product = await Product.findOneAndUpdate(
             { name: req.params.name }, // البحث باستخدام الاسم  
@@ -81,7 +81,7 @@ exports.likes = functions.https.onRequest(async (req, res) => {
 }); 
 
 // حذف المنتج
-exports.deleteproduct =  app.functions.https.onRequest(async (req, res) =>{
+app.delete("delete",async (req, res) =>{
     const product = await Product.findByIdAndDelete(
         req.params.id
     );
@@ -96,7 +96,7 @@ exports.deleteproduct =  app.functions.https.onRequest(async (req, res) =>{
 
 //تخزين اسم المنتج بشكل موقت
 
-exports.storage = app.functions.https.onRequest(async (req, res) => {
+app.patch("storage",async (req, res) => {
 const updatedproduct = await Product.findByIdAndUpdate(req.params.id, req.body, {
     runValidators: true
 });  
