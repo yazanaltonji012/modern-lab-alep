@@ -4,32 +4,34 @@ const app = express();
 const Product  = require('./module/shema.js')
 const cors = require('cors')
 const fs = require('fs')
+const path = require('path'); 
 const functions = require('firebase-functions');
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'images'))); 
+app.use(express.static(path.join(__dirname, 'module'))); 
+app.use(express.static(path.join(__dirname, 'wstyle.css'))); 
 app.use(cors({
     origin: '*', // يسمح بالوصول من أي مصدر. يمكنك استبدال * بمصدر محدد.  
 })); 
-/*exports.app = functions.https.onRequest(app);
-const admin = require('firebase-admin');
-const serviceAccount = require('C:\Users\yazan\Desktop\Projects\waraalsyahi\firebase.json'); // Replace with your service account key file
-
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: 'https://modern-lab-alepp.firebaseio.com' // Replace with your Firebase project ID
-});
-*/
 let url = "mongodb+srv://yazanaltonji:yazanaltonji0123@cluster0.fz4b9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 mongose.connect(url,{
 })
 .then(()=>{
+    app.listen("3000", () => {
+        console.log("connected to server 3000 succesfully")
+    })
     console.log("connected to mongoose succesfully")
 }).catch((err)=>{
 console.log("an error when conected to date base : "+err)
 })
 
-app.listen("3000", () => {
-    console.log("connected to server 3000 succesfully")
+
+
+
+app.get("/:",async (req,res)=>{
+    res.sendFile(path.join(__dirname, 'index.html'));
 })
+
 // الحصول على جميع المنتجات  
 app.get("/products",async (req, res)=> {
     const products = await Product.find();
