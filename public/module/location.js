@@ -5,7 +5,7 @@ function analysersweden() {
        const data = {
            name: "Analyser sweden"
        }
-    fetch(`https://modern-lab-alepp.web.app/nameproduct/66f44068479291389f1819fa`, {
+    fetch(`https://modern-lab-alep.onrender.com/nameproduct/66f44068479291389f1819fa`, {
            method: 'PATCH',
            headers: {
                'Content-Type': 'application/json'
@@ -17,14 +17,14 @@ function analysersweden() {
                productname = product.name
            }); 
     setTimeout(() => {
-        window.location.href = "./product.html";
+        window.location.href = "product.html";
     }, 600);
 }
     function analysergermany() {
         const data = {
             name: "Analyser Germany"
         }
-        fetch(`https://modern-lab-alepp.web.app/nameproduct/66f44068479291389f1819fa`, {
+        fetch(`https://modern-lab-alep.onrender.com/nameproduct/66f44068479291389f1819fa`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -36,14 +36,14 @@ function analysersweden() {
                 productname = product.name
             });
         setTimeout(() => {
-            window.location.href = "./product.html";
+            window.location.href = "product.html";
         }, 600);
     }
     function analyserchinese() {
         const data = {
             name: "Analyser chinese"
         }
-        fetch(`https://modern-lab-alepp.web.app/nameproduct/66f44068479291389f1819fa`, {
+        fetch(`https://modern-lab-alep.onrender.com/nameproduct/66f44068479291389f1819fa`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -55,14 +55,14 @@ function analysersweden() {
                 productname = product.name
             });
         setTimeout(() => {
-            window.location.href = "./product.html";
+            window.location.href = "product.html";
         }, 600);
     }
     function mezan() {
         const data = {
             name: "ميزان دقيق"
         }
-        fetch(`https://modern-lab-alepp.web.app/nameproduct/66f44068479291389f1819fa`, {
+        fetch(`https://modern-lab-alep.onrender.com/nameproduct/66f44068479291389f1819fa`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -74,14 +74,14 @@ function analysersweden() {
                 productname = product.name
             });
         setTimeout(() => {
-            window.location.href = "./product.html";
+            window.location.href = "product.html";
         }, 600);
     }
 }
 else{
     setTimeout(() => {
     const data = {  }
-        fetch(`https:/modern-lab-alepp.web.app/nameproduct/66f44068479291389f1819fa`, {
+        fetch(`https://modern-lab-alep.onrender.com/nameproduct/66f44068479291389f1819fa`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
@@ -91,7 +91,7 @@ else{
         .then(response => response.json())
         .then(prod => {
         pn = prod.name
-            fetch(`https://modern-lab-alepp.web.app/product/${pn}`)
+            fetch(`https://modern-lab-alepp.web.app/productbyname/${pn}`)
         .then(response => response.json())
         .then(product => {
         const name = document.getElementById("fonttitle")
@@ -105,6 +105,7 @@ else{
      console.log(pn)
     }); 
         }, 1);
+        /*
     function analysergermany() {
         const data = {
             name: "Analyser Germany"
@@ -121,7 +122,7 @@ else{
                 productname = product.name
             });
         setTimeout(() => {
-            window.location.href = "./product.html";
+            window.location.href = "product.html";
         }, 600);
     }
     function mezan() {
@@ -140,7 +141,7 @@ else{
                 productname = product.name
             });
         setTimeout(() => {
-            window.location.href = "./product.html";
+            window.location.href = "product.html";
         }, 600);
     }
     function analyserchinese() {
@@ -159,8 +160,9 @@ else{
                 productname = product.name
             });
         setTimeout(() => {
-            window.location.href = "./product.html";
+            window.location.href = "product.html";
         }, 600);
     }
         //`http://localhost:3000/product/${productName}` 
+*/
 }

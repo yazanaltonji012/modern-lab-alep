@@ -7,9 +7,7 @@ const fs = require('fs')
 const path = require('path'); 
 const functions = require('firebase-functions');
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'images'))); 
-app.use(express.static(path.join(__dirname, 'module'))); 
-app.use(express.static(path.join(__dirname, 'wstyle.css'))); 
+app.use(express.static(path.join(__dirname, 'public'))); 
 app.use(cors({
     origin: '*', // يسمح بالوصول من أي مصدر. يمكنك استبدال * بمصدر محدد.  
 })); 
@@ -25,10 +23,12 @@ mongose.connect(url,{
 console.log("an error when conected to date base : "+err)
 })
 
+app.get("/product",async (req,res)=>{
+    res.sendFile(path.join(__dirname, 'product.html')); 
+})
 
 
-
-app.get("/:",async (req,res)=>{
+app.get("/main",async (req,res)=>{
     res.sendFile(path.join(__dirname, 'index.html'));
 })
 
@@ -39,7 +39,7 @@ app.get("/products",async (req, res)=> {
 });
 
 // إضافة منتج جديد  
-app.get("/product",async(req, res)=> {
+app.get("/newproduct",async(req, res)=> {
     const { name, price, description,storage } = req.body;
 
     try {
@@ -53,7 +53,6 @@ app.get("/product",async(req, res)=> {
 //البحث عن المنتج بواسطة الاسم 
 app.get("/productbyname",async (req, res) => {
     const name = req.params.nam;
-    const spectifyid = "66f4293c73764c2e4ad765a6"
         const products = await Product.findOne({name});
         if(!products){
             res.send("no file there")
@@ -98,7 +97,8 @@ app.delete("delete",async (req, res) =>{
 
 //تخزين اسم المنتج بشكل موقت
 
-app.patch("storage",async (req, res) => {
+app.patch("/nameproduct/:id",async (req, res) => {
+    const spectifyid = "66f44068479291389f1819fa";
 const updatedproduct = await Product.findByIdAndUpdate(req.params.id, req.body, {
     runValidators: true
 });  
