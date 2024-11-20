@@ -2,7 +2,7 @@ function heart1() {
     var images = document.getElementById(`img3-2-1`);
     images.src="heart-fill.png";
      if (images.alt == "herat"){
-         fetch('https://modern-lab-alep.onrender.com/main/Analyser sweden/like', {
+         fetch('https://modern-lab-alep.onrender.com/Analyser sweden/like', {
              method: 'POST'
          })
 
@@ -21,7 +21,7 @@ function heart2() {
     var images = document.getElementById("img3-2-2");
     images.src="heart-fill.png";
     if (images.alt == "herat") {
-        fetch('https://modern-lab-alep.onrender.com/main/Analyser Germany/like', {
+        fetch('https://modern-lab-alep.onrender.com/Analyser Germany/like', {
             method: 'POST'
         })
 
@@ -40,7 +40,7 @@ function heart3() {
     var images = document.getElementById("img3-2-3");
     images.src="heart-fill.png";
     if (images.alt == "herat") {
-        fetch('https://modern-lab-alep.onrender.com/main/Analyser chinese/like', {
+        fetch('https://modern-lab-alep.onrender.com/Analyser chinese/like', {
             method: 'POST'
         })
 
@@ -59,7 +59,7 @@ function heart4() {
     var images = document.getElementById("img3-2-4");
     images.src="heart-fill.png";
     if (images.alt == "herat") {
-        fetch('https://modern-lab-alep.onrender.com/main/ميزان دقيق/like', {
+        fetch('https://modern-lab-alep.onrender.com/ميزان دقيق/like', {
             method: 'POST'
         })
 
