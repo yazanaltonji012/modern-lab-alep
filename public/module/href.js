@@ -25,6 +25,7 @@
 
 }
 offers()
+/*
 function callus(){
     let callus = document.getElementById("callus")
     
@@ -69,4 +70,4 @@ function callus(){
         document.body.appendChild(divbig)
     })
 }
-callus()
+callus()*/

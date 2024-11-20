@@ -2,7 +2,7 @@ function heart1() {
     var images = document.getElementById(`img3-2-1`);
     images.src="heart-fill.png";
      if (images.alt == "herat"){
-         fetch('http://localhost:3000/products/Analyser sweden/like', {
+         fetch('https://modern-lab-alep.onrender.com/main/Analyser sweden/like', {
              method: 'POST'
          })
 
@@ -21,7 +21,7 @@ function heart2() {
     var images = document.getElementById("img3-2-2");
     images.src="heart-fill.png";
     if (images.alt == "herat") {
-        fetch('http://localhost:3000/products/Analyser Germany/like', {
+        fetch('https://modern-lab-alep.onrender.com/main/Analyser Germany/like', {
             method: 'POST'
         })
 
@@ -40,7 +40,7 @@ function heart3() {
     var images = document.getElementById("img3-2-3");
     images.src="heart-fill.png";
     if (images.alt == "herat") {
-        fetch('http://localhost:3000/products/Analyser chinese/like', {
+        fetch('https://modern-lab-alep.onrender.com/main/Analyser chinese/like', {
             method: 'POST'
         })
 
@@ -59,7 +59,7 @@ function heart4() {
     var images = document.getElementById("img3-2-4");
     images.src="heart-fill.png";
     if (images.alt == "herat") {
-        fetch('http://localhost:3000/products/ميزان دقيق/like', {
+        fetch('https://modern-lab-alep.onrender.com/main/ميزان دقيق/like', {
             method: 'POST'
         })
 
@@ -148,27 +148,4 @@ divbig.setAttribute("class","whats")
 document.body.appendChild(divbig)
 
 //img.setAttribute("id","img3-a");
-}
-function completeAS() {
-    let text = "Analyser sweden"
-    createmsg(text)
-}
-function completeAG() {
-    let text = "Analyser Germany"
-    createmsg(text)
-}
-function completeACH() {
-    let text = "Analyser Chinese"
-    createmsg(text)
-}
-function completeMZN() {
-    let text = "ميزان دقبق"
-    createmsg(text)
-}
-function prod() {
-    let text = document.getElementById("fonttitle")
-    console.log(text)
-    let t = text.innerHTML
-    console.log(t)
-    createmsg(t)
 }

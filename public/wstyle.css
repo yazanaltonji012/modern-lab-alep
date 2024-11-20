@@ -1,36 +1,55 @@
 * {
 	padding: 0px;
 	margin: 0px;
+
 }
 .title{
 	padding: 5px;
 	
 }
-.sb-p{
-	background-color:white;
-	display: flex;
-	flex-flow: row wrap-reverse;
-	align-items: center;
-	justify-content: space-evenly;
-	box-shadow: 1px 1px 5px 1px black;
-}
-.sb-i{
-	display: flex;
-	flex-flow: column-reverse wrap;
-	font-style: oblique;
-	font-weight: 550;
-	font-size: 20px;
-	align-items: center;
-}
-.sb-i:hover{
-	border-bottom: royalblue solid 2px;
-	font-size: 23px;
-}
 a{
-	list-style: none;
-	color: black;
 	text-decoration: none;
-	margin-top: 5px;
+}
+.nav-p{
+	display: flex;
+	flex-flow: row wrap;
+	background: white;
+	padding: 5px 15px;
+	box-shadow: 0px 5px 10px rgb(0, 0, 0.2);
+	border-radius: 12px; 
+		align-items: center;
+justify-content: space-evenly;
+}
+.nav-p li {
+	list-style: none;
+	margin: 0 10px;
+	font-family: 'Poppins',sans-serif;
+	align-items: center;
+
+}
+.nav-p li a {
+	position: relative;
+	font-size: 20px;
+	color: #333;
+	font-weight: 500;
+	padding: 6px 0px;
+	text-decoration: none;
+	align-items: center;
+}
+.nav-p li a:before{
+position: absolute;
+content: '';
+height: 3px;
+width: 100%;
+background: royalblue;
+bottom: 0;
+left: 0;
+width: 0%;
+transition: all 0.4s ease;
+opacity: 90%;
+}
+.nav-p li a:hover:before{
+	width: 100%;
 }
 #img1{
 	border-radius: 50%;
@@ -52,8 +71,8 @@ a{
 	box-shadow: 1px 1px 10px 1px #888;
 	border-radius: 10px;
 	background-color: white;
-	width: 370px;
-	height: 340px;
+	width: 270px;
+	height: auto;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
@@ -62,7 +81,7 @@ a{
 #img2{
 	padding: 0px;
 	margin: 0px;
-	width: 340px;
+	width: 240px;
 	height: 240px;
 }
 .cont:hover {
@@ -78,6 +97,8 @@ cursor: pointer;
 	flex-flow: row wrap;
 	justify-content: space-evenly;
 	align-items: center;
+	border-top: 0.4px solid black;
+
 }
 #img3-1{
     padding: 5px;
@@ -104,7 +125,6 @@ cursor: pointer;
 	height: 30px;
 	position: relative;
 	top: 10px;
- 
 }
 #img3-3{
     padding: 5px;
@@ -131,24 +151,29 @@ cursor: pointer;
 }
 
 .price{
-	color: green;
-	font-size: 21px;
-	opacity: 80%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: solid;
+	/*font-weight: 900;*/
+	/* <img src="profile.png" width="30px" height="30px" style=" position: relative;top: 12px;">*/
+	font-size: 25px;
+	margin-top: 20px;
 }
 .search-bar{
-margin: 10px;
+margin: 0px;
 display: flex;
-flex-flow: row wrap-reverse;
+flex-flow: row wrap;
+position: relative;
+top: 10px;
 }
 #search{
-margin: 20px;
+margin: 0px;
 padding: 5px;
-width: 200px;
+width: 350px;
 height: 30px;
 color: black;
 border-radius: 10px;
 animation-name: search;
-animation-duration: 1.5s;
+animation-duration: 2s;
 font-size: 16px;
 }
 @keyframes search{
@@ -156,7 +181,7 @@ from{
 width: 20px;
 }
 to{
-width: 200px
+width: 350px
 }
 }
 @keyframes imagec{
@@ -239,4 +264,5 @@ font-family:'Roboto', sans-serif;;
 line-height: 1.0;
 font-size: 20px;
 font-weight: 300;
+color: black;
 }
