@@ -63,7 +63,7 @@ app.get("/productbyname",async (req, res) => {
 })
 
 // معالجة إعجاب لمنتج  
-app.get(":name/like",async (req, res) => {
+app.post("/:name/like",async (req, res) => {
     try {
         const product = await Product.findOneAndUpdate(
             { name: req.params.name }, // البحث باستخدام الاسم  
