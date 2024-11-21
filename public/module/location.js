@@ -5,7 +5,8 @@ function analysersweden() {
        const data = {
            name: "Analyser sweden"
        }
-    fetch(`https://modern-lab-alep.onrender.com/nameproduct/66f44068479291389f1819fa`, {
+    const url = `https://modern-lab-alep.onrender.com/nameproduct/66f44068479291389f1819fa`;
+    fetch(url, {
            method: 'PATCH',
            headers: {
                'Content-Type': 'application/json'
@@ -84,14 +85,15 @@ else{
         fetch(`https://modern-lab-alep.onrender.com/nameproduct/66f44068479291389f1819fa`, {
         method: 'PATCH',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
         },
         body: JSON.stringify(data)
         })
         .then(response => response.json())
         .then(prod => {
         pn = prod.name
-            fetch(`https://modern-lab-alepp.web.app/productbyname/${pn}`)
+            fetch(`https://modern-lab-alep.onrender.com/productbyname/${pn}`)
         .then(response => response.json())
         .then(product => {
         const name = document.getElementById("fonttitle")
@@ -105,7 +107,7 @@ else{
      console.log(pn)
     }); 
         }, 1);
-        /*
+        
     function analysergermany() {
         const data = {
             name: "Analyser Germany"
@@ -164,5 +166,4 @@ else{
         }, 600);
     }
         //`http://localhost:3000/product/${productName}` 
-*/
 }

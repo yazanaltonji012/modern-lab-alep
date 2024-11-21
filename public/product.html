@@ -5,47 +5,61 @@
         <meta charset="utf-8">
         <title id="s">Loading...</title>
         <style>
-            *{
-                padding:0px;
-                margin: 0px;
-            }
-            
-            body{
-                margin: 0px;
-                background-color: white;
-            }
-            .ptitle{
-                margin: 5px;
-                }
-           .sb-p{
-               margin: 0px;
-               display: flex;
-               flex-flow: wrap row;
-               flex-shrink: initial;
-               background-color: white;
-               justify-content: space-evenly;
-               align-items: center;
-               box-shadow: 1px 1px 5px rgb(0, 0, 1)
-           }
-           .sb-i{
-               padding: 0px;
-               margin: 10px;
-               display: flex;
-               flex-flow: column-reverse wrap;
-               align-items: center;
-           }
-           a{
-            list-style-type: none;
-            color: black;
-            text-decoration: none;
-            font-size: 20px;
-            font-style: italic;
-            margin-top: 5px;
-           }
-           .sb-i:hover{
-               font-size: 24px;
-               border-bottom: royalblue 2px solid;
-           }
+*{
+    padding:0px;
+    margin: 0px;
+ }
+body{
+     background-color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.ptitle{
+     margin: 5px;
+}
+.nav-p{
+	display: flex;
+	flex-flow: row wrap-reverse;
+	background: white;
+	padding: 5px 15px;
+	box-shadow: 0px 5px 10px rgb(0, 0, 0.2);
+	border-radius: 12px;     
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav-p li {
+	list-style: none;
+	margin: 0 10px;
+	font-family: 'Poppins',sans-serif;
+	align-items: center;
+
+}
+.nav-p li a {
+	position: relative;
+	font-size: 20px;
+	color: #333;
+	font-weight: 500;
+	padding: 6px 0px;
+	text-decoration: none;
+	align-items: center;
+}
+.nav-p li a:before{
+position: absolute;
+content: '';
+height: 3px;
+width: 100%;
+background: royalblue;
+bottom: 0;
+left: 0;
+width: 0%;
+transition: all 0.4s ease;
+opacity: 90%;
+}
+.nav-p li a:hover:before{
+	width: 100%;
+}
         .product{
             display: flex;
             flex-flow: row wrap;
@@ -93,6 +107,7 @@
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-around;
+            float: right;
         }
         #img{
             border-radius: 10px;
@@ -223,37 +238,50 @@ cursor: pointer;
 margin: 5px;
 }
 
-        </style>
-    </head>
+    </style>
+</head>
 
-    <body>
-      <div class="sb-p">
-    <div class="sb-i">
-        <a href="#myaccount">حسابي</a>
-        <img src="profile.png" width="30px" height="30px"> 
-    </div>
-    <div class="sb-i">
-        <a href="index.html"> العودة للصفحة</a>
-        <img src="home.png" width="30px" height="30px"> 
-    </div>
-    <img src="title.jpg" alt="modern lab" width="200px" height="110px" class="ptitle">
-
-      </div>
+<body>
+   <ul class="nav-p">
+    <li>
+        <a href="#"> حسابي </a>
+    </li>
+    <li>
+        <a href="/main"> الصفحة الرئيسية </a>
+    </li>
+    <li>
+        <div>
+            <img src="title.jpg" alt="modern lab" width="220px" height="65px" class="ptitle">
+        </div>
+    </li>
+</ul>
         <div class="main">
             <div class="product">
                 <div class="product-i">
                     <img width="auto" height="390px" alt="main product" id="img">
-                    <h3 id="fonttitle" style="font-size: 25px;color: black; font-weight: 600;margin: 5px;" align="center">Loading...</h3>
+                <article class="area">
+                    <img src="back.png" id="back" width="20px" height="25px" style="margin:5px; padding:5px; opacity: 80%; position: relative; top: 45px;">
+                    <div class="container">
+                        <img width="120px" height="100px" alt="product" id="img1">
+                        <img width="120px" height="100px" alt="product" id="img2">
+                        <img width="120px" height="100px" alt="product" id="img3">
+                        <img width="120px" height="100px" alt="product" id="img4">
+                        <img width="120px" height="100px" alt="product" id="img-video" src="video image.png">
+                        <source src="Project Building Part 5- Instagram Clone.webm" id="src">
+                    </div>
+                    <img src="next.png" id="next" width="20px" height="25px" style="margin:5px; padding:5px; opacity: 80%; position: relative; top: 45px;">
+                </article>
                 </div>
         <div class="prod-d">
         <div class="product-d">
-        <h2 style="font-size:45px; color:black; margin:5px; font-weight: 600 ;margin-right:auto;margin-bottom: 0px;" id="price">Loading...SP</h2>
-        <p  align = "left" style="color : blue; opacity : 60%; margin :5px; margin-right:auto;">يتوفر من هذا المنتج  10 قطع</p>
+        <h3 id="fonttitle" style="font-size: 45px;color: black; font-weight: 600;margin: 5px; font-family:'Roboto', sans-serif;" align="center">Loading...</h3>
+        <p  align = "left" style="color : royalblue; opacity : 85%; margin :5px; margin-right:auto;">يتوفر من هذا المنتج  10 قطع</p>
         <p style="font-family:cursive; font-size:20px; font-weight: 600" id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quod iusto rerum delectus architecto, sit incidunt vero
         reiciendis debitis facere, tenetur harum. Dolores quia nihil odio inventore dolorem necessitatibus! Pariatur Lorem
         ipsum dolor sit amet consectetur, adipisicing elit. In eius magni fugit autem. At nam nesciunt laudantium consectetur
         ex. Quaerat tenetur aut laboriosam reprehenderit neque exercitationem doloribus culpa, quasi beatae. Lorem ipsum
         dolor sit amet consectetur adipisicing elit. Porro eius labore ea saepe nam omnis illum natus eligendi accusamu </p>
+            <h2 style="padding:3px; font-size:25px; color:black; margin:30px; font-weight: 600 ; font-family:'Roboto', sans-serif; border-top: black solid 1px;" id="price" align="center">Loading...SP</h2>
         <div class="bttn-prodct">
         <div>
             <img src="whatsapp.png" onclick="prod()" id="img3-1" width="35px" height="30px">
@@ -270,18 +298,6 @@ margin: 5px;
 
     </div>
 </div>
-<article class="area">
-    <img src="back.png" id="back" width="20px" height="25px" style="margin:5px; padding:5px; opacity: 80%; position: relative; top: 45px;">
-    <div class="container">
-        <img width="120px" height="100px" alt="product" id="img1">
-        <img width="120px" height="100px" alt="product" id="img2">
-        <img width="120px" height="100px" alt="product" id="img3">
-        <img width="120px" height="100px" alt="product" id="img4">
-        <img width="120px" height="100px" alt="product" id="img-video" src="video image.png">
-        <source src="Project Building Part 5- Instagram Clone.webm" id="src">
-    </div>
-    <img src="next.png" id="next" width="20px" height="25px" style="margin:5px; padding:5px; opacity: 80%; position: relative; top: 45px;">
-</article>
                 </div>
             </div>
             <p style="font-size:30px; margin:5px; color: black; font-weight: 600; " align = "center">عناصر قد تعجبك</p>
@@ -311,12 +327,13 @@ margin: 5px;
     </span>
 
         </div>
-    </body>
+</body>
 <script src="./module/location.js"></script>
 <script src="./module/container.js"></script>
 <script src="./module/replace-img.js"></script>
 <script src="./module/share.js"></script>
 <script src="./module/photo.js"></script>
+
 	<footer style="background-color: royalblue; margin:10px 0px 0px 0px; padding:5px; height:100%;" >
             <div class="footer">
              <h3 align="center">تابعنا على مواقع التواصل</h3>
@@ -339,25 +356,3 @@ margin: 5px;
             <p align="center">تم هذا الموقع بواسطة المبرمج يزن التنحي للتواصل على الرقم 0950083544 </p>
         </footer>
 </html>
-<script >
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyBHZExVd1EFsliRXJDpulk0oesR1zGPlAo",
-            authDomain: "modern-lab-alep.firebaseapp.com",
-            projectId: "modern-lab-alep",
-            storageBucket: "modern-lab-alep.appspot.com",
-            messagingSenderId: "375483737715",
-            appId: "1:375483737715:web:553eb6e6e7d41097116c06",
-            measurementId: "G-X1LKPQJ66K"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-</script>

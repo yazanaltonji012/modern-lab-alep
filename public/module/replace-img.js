@@ -74,45 +74,6 @@ function heart4() {
     }
     else console.log("you are click heart actually")
 }
-function heartp() {
-    var images = document.getElementById(`img3-2-1`);
-    images.src = "heart-fill.png";
-    if (images.alt == "herat") {
-        var title = document.getElementById("fonttitle")
-        let t = title.innerHTML;
-        fetch(`http://localhost:3000/products/${t}/like`, {
-            method: 'POST'
-        })
-
-            .then(response => response.json())
-            .then(products => {
-                const productelement = document.getElementById("like")
-                productelement.innerHTML = `  ${products.likes} `;
-                return images.alt = "heart-full";
-
-
-            });
-    }
-    else console.log("you are click heart actually")
-}
-function heart5() {
-    var images = document.getElementById("img3-2-5");
-    images.src="heart-fill.png";
-}
-function heart6() {
-    var images = document.getElementById("img3-2-6");
-    images.src="heart-fill.png";
-}
-function heart7() {
-    var images = document.getElementById("img3-2-7");
-    images.src="heart-fill.png";
-}
-function heart8() {
-    var images = document.getElementById("img3-2-8");
-    images.src="heart-fill.png";
-}
-
-
 function createmsg(prid){
 let title=document.getElementsByClassName("name")
 let divbig = document.createElement('div')
@@ -148,4 +109,27 @@ divbig.setAttribute("class","whats")
 document.body.appendChild(divbig)
 
 //img.setAttribute("id","img3-a");
+}
+function completeAS() {
+    let text = "Analyser sweden"
+    createmsg(text)
+}
+function completeAG() {
+    let text = "Analyser Germany"
+    createmsg(text)
+}
+function completeACH() {
+    let text = "Analyser Chinese"
+    createmsg(text)
+}
+function completeMZN() {
+    let text = "ميزان دقبق"
+    createmsg(text)
+}
+function prod() {
+    let text = document.getElementById("fonttitle")
+    console.log(text)
+    let t = text.innerHTML
+    console.log(t)
+    createmsg(t)
 }

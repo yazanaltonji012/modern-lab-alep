@@ -12,7 +12,7 @@ a{
 }
 .nav-p{
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row wrap-reverse;
 	background: white;
 	padding: 5px 15px;
 	box-shadow: 0px 5px 10px rgb(0, 0, 0.2);
@@ -260,7 +260,7 @@ height: 30px;
 	width: 60%;
 }
 .name{
-font-family:'Roboto', sans-serif;;
+font-family:'Roboto', sans-serif;
 line-height: 1.0;
 font-size: 20px;
 font-weight: 300;

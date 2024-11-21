@@ -51,7 +51,7 @@ app.get("/newproduct",async(req, res)=> {
     } 
 });
 //البحث عن المنتج بواسطة الاسم 
-app.get("/productbyname",async (req, res) => {
+app.get("/productbyname/:nam",async (req, res) => {
     const name = req.params.nam;
         const products = await Product.findOne({name});
         if(!products){
