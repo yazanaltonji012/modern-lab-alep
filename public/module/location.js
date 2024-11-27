@@ -2,168 +2,80 @@ let productname ;
 const title = document.querySelector("title")
 if (title.innerHTML == "Modern Lab") {
 function analysersweden() {
-       const data = {
-           name: "Analyser sweden"
-       }
-    const url = `https://modern-lab-alep.onrender.com/nameproduct/66f44068479291389f1819fa`;
-    fetch(url, {
-           method: 'PATCH',
-           headers: {
-               'Content-Type': 'application/json'
-           },
-           body: JSON.stringify(data)
-       })
-           .then(response => response.json())
-           .then(product => {
-               productname = product.name
-           }); 
+    //https://modern-lab-alep.onrender.com
+    const nameproduct = "Analyser Sweden";
+    const url = `http://localhost:3000/${nameproduct}`; 
     setTimeout(() => {
-        window.location.href = "product.html";
-    }, 600);
+        window.location.href = url;
+    }, 300);
 }
     function analysergermany() {
-        const data = {
-            name: "Analyser Germany"
-        }
-        fetch(`https://modern-lab-alep.onrender.com/nameproduct/66f44068479291389f1819fa`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(response => response.json())
-            .then(product => {
-                productname = product.name
-            });
+        const nameproduct = "Analyser Germany";
+        const url = `http://localhost:3000/${nameproduct}`;
         setTimeout(() => {
-            window.location.href = "product.html";
-        }, 600);
+            window.location.href = url;
+        }, 300);
     }
     function analyserchinese() {
-        const data = {
-            name: "Analyser chinese"
-        }
-        fetch(`https://modern-lab-alep.onrender.com/nameproduct/66f44068479291389f1819fa`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(response => response.json())
-            .then(product => {
-                productname = product.name
-            });
+        const nameproduct = "Analyser chinese";
+        const url = `http://localhost:3000/${nameproduct}`;
         setTimeout(() => {
-            window.location.href = "product.html";
-        }, 600);
+            window.location.href = url;
+        }, 300);
     }
     function mezan() {
-        const data = {
-            name: "ميزان دقيق"
-        }
-        fetch(`https://modern-lab-alep.onrender.com/nameproduct/66f44068479291389f1819fa`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(response => response.json())
-            .then(product => {
-                productname = product.name
-            });
+        const nameproduct = "ميزان دقيق";
+        const url = `http://localhost:3000/${nameproduct}`;
         setTimeout(() => {
-            window.location.href = "product.html";
-        }, 600);
+            window.location.href = url;
+        }, 300);
     }
 }
 else{
-    setTimeout(() => {
-    const data = {  }
-        fetch(`https://modern-lab-alep.onrender.com/nameproduct/66f44068479291389f1819fa`, {
-        method: 'PATCH',
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin':'*'
-        },
-        body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(prod => {
-        pn = prod.name
-            fetch(`https://modern-lab-alep.onrender.com/productbyname/${pn}`)
+        
+        const name = document.getElementById("fonttitle")
+        // الحصول على المسار الحالي  
+        let currentPath = window.location.pathname;
+
+        // تقسيم المسار إلى أجزاء  
+        let pathSegments = currentPath.split('/');
+
+        // الحصول على الجزء الأخير من المسار  
+        let lastSegment = pathSegments[pathSegments.length - 1];
+        fetch(`https://modern-lab-alep.onrender.com/productbyname/${lastSegment}`)
         .then(response => response.json())
         .then(product => {
-        const name = document.getElementById("fonttitle")
+
+        // طباعته في وحدة التحكم  
+        console.log(lastSegment)
         name.innerHTML = `${product.name}`;
             const price = document.getElementById("price")
-            price.innerHTML = `  ${product.price} SP `;
+            price.innerHTML = `السعر: SP ${product.price}  `;
             const desc = document.getElementById("desc")
             desc.innerHTML = `${product.description}`;
+            const img1 = document.getElementById("img1");
+            img1.src = product.ps1;
+            const img2 = document.getElementById("img2");
+            img2.src = product.ps2;
+            const img3 = document.getElementById("img3");
+            img3.src = product.ps3;
+            const img4 = document.getElementById("img4");
+            img4.src = product.ps4;
             title.innerHTML = `حول المنتج ${product.name}`
+            const src = document.getElementById("src");
+            src.src = product.video;
+            const count = document.getElementById("count");
+            count.innerHTML = `${product.count}`
     });
-     console.log(pn)
-    }); 
-        }, 1);
-        
+    
     function analysergermany() {
-        const data = {
-            name: "Analyser Germany"
-        }
-        fetch(`https://modern-lab-alepp.web.app/nameproduct/66f44068479291389f1819fa`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(response => response.json())
-            .then(product => {
-                productname = product.name
-            });
-        setTimeout(() => {
-            window.location.href = "product.html";
-        }, 600);
+        window.location.href = "http://localhost:3000/Analyser%20Germany";
     }
     function mezan() {
-        const data = {
-            name: "ميزان دقيق"
-        }
-        fetch(`https://modern-lab-alepp.web.app/nameproduct/66f44068479291389f1819fa`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(response => response.json())
-            .then(product => {
-                productname = product.name
-            });
-        setTimeout(() => {
-            window.location.href = "product.html";
-        }, 600);
+        window.location.href = "http://localhost:3000/%D9%85%D9%8A%D8%B2%D8%A7%D9%86%20%D8%AF%D9%82%D9%8A%D9%82"
     }
     function analyserchinese() {
-        const data = {
-            name: "Analyser chinese"
-        }
-        fetch(`https://modern-lab-alepp.web.app/nameproduct/66f44068479291389f1819fa`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(response => response.json())
-            .then(product => {
-                productname = product.name
-            });
-        setTimeout(() => {
-            window.location.href = "product.html";
-        }, 600);
-    }
+        window.location.href = "http://localhost:3000/Analyser Sweden";
+       }
         //`http://localhost:3000/product/${productName}` 
 }

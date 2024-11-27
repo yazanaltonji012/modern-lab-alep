@@ -1,4 +1,3 @@
-
     let next = document.getElementById("next");
     let back = document.getElementById("back");
     let scroll = document.querySelector(".container");

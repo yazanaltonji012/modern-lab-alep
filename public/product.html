@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="ar">
     <head>
         <link href="microscope.png" rel="icon">
@@ -244,10 +244,10 @@ margin: 5px;
 <body>
    <ul class="nav-p">
     <li>
-        <a href="#"> حسابي </a>
+        <a href="#account"> حسابي </a>
     </li>
     <li>
-        <a href="/main"> الصفحة الرئيسية </a>
+        <a href="/"> الصفحة الرئيسية </a>
     </li>
     <li>
         <div>
@@ -258,7 +258,7 @@ margin: 5px;
         <div class="main">
             <div class="product">
                 <div class="product-i">
-                    <img width="auto" height="390px" alt="main product" id="img">
+                    <img width="auto" height="390px" alt="main product" id="img" src="white.png">
                 <article class="area">
                     <img src="back.png" id="back" width="20px" height="25px" style="margin:5px; padding:5px; opacity: 80%; position: relative; top: 45px;">
                     <div class="container">
@@ -275,25 +275,25 @@ margin: 5px;
         <div class="prod-d">
         <div class="product-d">
         <h3 id="fonttitle" style="font-size: 45px;color: black; font-weight: 600;margin: 5px; font-family:'Roboto', sans-serif;" align="center">Loading...</h3>
-        <p  align = "left" style="color : royalblue; opacity : 85%; margin :5px; margin-right:auto;">يتوفر من هذا المنتج  10 قطع</p>
-        <p style="font-family:cursive; font-size:20px; font-weight: 600" id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quod iusto rerum delectus architecto, sit incidunt vero
+        <p  align = "left" style="color : royalblue; opacity : 85%; margin :5px; margin-right:auto;" id="count"></p>
+        <p style="font-family:'Roboto', sans-serif; font-size:20px; font-weight: 600 ;border-top:solid black 1px;" id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quod iusto rerum delectus architecto, sit incidunt vero
         reiciendis debitis facere, tenetur harum. Dolores quia nihil odio inventore dolorem necessitatibus! Pariatur Lorem
         ipsum dolor sit amet consectetur, adipisicing elit. In eius magni fugit autem. At nam nesciunt laudantium consectetur
         ex. Quaerat tenetur aut laboriosam reprehenderit neque exercitationem doloribus culpa, quasi beatae. Lorem ipsum
         dolor sit amet consectetur adipisicing elit. Porro eius labore ea saepe nam omnis illum natus eligendi accusamu </p>
-            <h2 style="padding:3px; font-size:25px; color:black; margin:30px; font-weight: 600 ; font-family:'Roboto', sans-serif; border-top: black solid 1px;" id="price" align="center">Loading...SP</h2>
+            <h2 style="padding:3px; font-size:35px; color:royalblue; margin:30px; font-weight: 600 ; font-family:'Roboto', sans-serif;" id="price" align="center">Loading...SP</h2>
         <div class="bttn-prodct">
         <div>
             <img src="whatsapp.png" onclick="prod()" id="img3-1" width="35px" height="30px">
-            <h4 align="center">محادثة</h4>
+            <h4 align="center" style="margin : 3px;">محادثة</h4>
         </div>
         <div>
             <img src="heart.png" id="img3-2-1" onclick="heartp()" alt="herat" width="35px" height="30px">
-            <h4 align="center" id="like">اعجاب</h4>
+            <h4 align="center" id="like" style="margin : 3px;">اعجاب</h4>
         </div>
         <div>
             <img src="share.png" id="img3-3" alt="share" onclick="share()" width="35px" height="30px">
-            <h4 align="center">مشاركة</h4>
+            <h4 align="center" style="margin : 3px;">مشاركة</h4>
         </div>
 
     </div>
@@ -321,7 +321,7 @@ margin: 5px;
             <div class="related-it" onclick="analyserchinese()">
                 <img src="./images/analyser-2.jpg" width="210px" height="200px" style="box-shadow:1px 1px 10px rgb(0, 0, 1); border-radius:10px;">
                 <h5 class="related" align= "center">محلل صيني</h5>
-                <h6 align= "center" style="color:blue; opacity:85%;">يتوفر من هذا المنتج 10 قطع</h6>
+                <h6 align= "center" style="color:blue; opacity:85%;" >يتوفر من هذا المنتج 10 قطع</h6>
             </div>
         </div>
     </span>
@@ -332,9 +332,19 @@ margin: 5px;
 <script src="./module/container.js"></script>
 <script src="./module/replace-img.js"></script>
 <script src="./module/share.js"></script>
-<script src="./module/photo.js"></script>
+<script>
+    // الحصول على المسار الحالي  
+    let currentPath = window.location.pathname;
 
-	<footer style="background-color: royalblue; margin:10px 0px 0px 0px; padding:5px; height:100%;" >
+    // تقسيم المسار إلى أجزاء  
+    let pathSegments = currentPath.split('/');
+
+    // الحصول على الجزء الأخير من المسار  
+    let lastSegment = pathSegments[pathSegments.length - 1];
+    //console.log(lastSegment)
+</script>
+
+	<footer style="background-color: royalblue; margin:10px 0px 0px 0px; padding:5px; height:150px;" >
             <div class="footer">
              <h3 align="center">تابعنا على مواقع التواصل</h3>
                 <div class="foot">

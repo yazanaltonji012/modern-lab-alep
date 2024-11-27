@@ -5,7 +5,6 @@ const Product  = require('./module/shema.js')
 const cors = require('cors')
 const fs = require('fs')
 const path = require('path'); 
-const functions = require('firebase-functions');
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public'))); 
 app.use(cors({
@@ -23,27 +22,48 @@ mongose.connect(url,{
 console.log("an error when conected to date base : "+err)
 })
 
-app.get("/product",async (req,res)=>{
-    res.sendFile(path.join(__dirname, 'product.html')); 
+
+//app.get("/product/:nam",async (req,res)=>{
+    /*
+    const name = req.params.nam;
+    const products = await Product.findOne({ name });
+    if (!products) {
+        res.send("no file there")
+    }
+    else {*/
+        //        res.json(products);
+  //      res.sendFile(path.join(__dirname, 'product.html')); 
+    //}
+    
+//})
+app.get("/:id", async (req, res) => {
+    
+    const name = req.params.id;
+    const nameproduct = await Product.findOne({ name });
+    if (!nameproduct) {
+        res.send("no file there")
+    }
+    else{
+    console.log("products", nameproduct)
+    res.sendFile(path.join(__dirname, 'public','product.html')); 
+    }
 })
 
-
-app.get("/main",async (req,res)=>{
+app.get("/",async (req,res)=>{
     res.sendFile(path.join(__dirname, 'index.html'));
 })
 
 // الحصول على جميع المنتجات  
-app.get("/products",async (req, res)=> {
+app.get("/products/all",async (req, res)=> {
     const products = await Product.find();
     res.send(products);
 });
 
 // إضافة منتج جديد  
-app.get("/newproduct",async(req, res)=> {
-    const { name, price, description,storage } = req.body;
-
+app.post("/newproduct",async(req, res)=> {
+    const { name, price, description, storage, ps1, ps2, ps3, ps4, ps5,video,count } = req.body;
     try {
-        const newProduct = new Product({ name, price, description, storage });
+        const newProduct = new Product(req.body);
         await newProduct.save();
         res.status(201).json(newProduct);
     } catch (error) {
@@ -82,7 +102,7 @@ app.post("/:name/like",async (req, res) => {
 }); 
 
 // حذف المنتج
-app.delete("delete",async (req, res) =>{
+app.delete("/delete/:id",async (req, res) =>{
     const product = await Product.findByIdAndDelete(
         req.params.id
     );
@@ -94,7 +114,6 @@ app.delete("delete",async (req, res) =>{
         console.log(`the product ${product.name} has been succesfully deleted`)
     }
 });
-
 //تخزين اسم المنتج بشكل موقت
 
 app.patch("/nameproduct/:id",async (req, res) => {

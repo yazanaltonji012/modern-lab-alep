@@ -1,3 +1,4 @@
+
 function heart1() {
     var images = document.getElementById(`img3-2-1`);
     images.src="heart-fill.png";
@@ -125,11 +126,4 @@ function completeACH() {
 function completeMZN() {
     let text = "ميزان دقبق"
     createmsg(text)
-}
-function prod() {
-    let text = document.getElementById("fonttitle")
-    console.log(text)
-    let t = text.innerHTML
-    console.log(t)
-    createmsg(t)
 }
