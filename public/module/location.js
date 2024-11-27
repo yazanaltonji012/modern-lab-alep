@@ -4,28 +4,28 @@ if (title.innerHTML == "Modern Lab") {
 function analysersweden() {
     //https://modern-lab-alep.onrender.com
     const nameproduct = "Analyser Sweden";
-    const url = `http://localhost:3000/${nameproduct}`; 
+    const url = `https://modern-lab-alep.onrender.com/${nameproduct}`; 
     setTimeout(() => {
         window.location.href = url;
     }, 300);
 }
     function analysergermany() {
         const nameproduct = "Analyser Germany";
-        const url = `http://localhost:3000/${nameproduct}`;
+        const url = `https://modern-lab-alep.onrender.com/${nameproduct}`;
         setTimeout(() => {
             window.location.href = url;
         }, 300);
     }
     function analyserchinese() {
         const nameproduct = "Analyser chinese";
-        const url = `http://localhost:3000/${nameproduct}`;
+        const url = `https://modern-lab-alep.onrender.com/${nameproduct}`;
         setTimeout(() => {
             window.location.href = url;
         }, 300);
     }
     function mezan() {
         const nameproduct = "ميزان دقيق";
-        const url = `http://localhost:3000/${nameproduct}`;
+        const url = `https://modern-lab-alep.onrender.com/${nameproduct}`;
         setTimeout(() => {
             window.location.href = url;
         }, 300);
@@ -69,13 +69,13 @@ else{
     });
     
     function analysergermany() {
-        window.location.href = "http://localhost:3000/Analyser%20Germany";
+        window.location.href = "https://modern-lab-alep.onrender.com/Analyser%20Germany";
     }
     function mezan() {
-        window.location.href = "http://localhost:3000/%D9%85%D9%8A%D8%B2%D8%A7%D9%86%20%D8%AF%D9%82%D9%8A%D9%82"
+        window.location.href = "https://modern-lab-alep.onrender.com/%D9%85%D9%8A%D8%B2%D8%A7%D9%86%20%D8%AF%D9%82%D9%8A%D9%82"
     }
     function analyserchinese() {
-        window.location.href = "http://localhost:3000/Analyser Sweden";
+        window.location.href = "https://modern-lab-alep.onrender.com/Analyser Sweden";
        }
         //`http://localhost:3000/product/${productName}` 
 }
