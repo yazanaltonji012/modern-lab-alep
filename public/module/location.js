@@ -4,28 +4,28 @@ if (title.innerHTML == "Modern Lab") {
 function analysersweden() {
     //https://modern-lab-alep.onrender.com
     const nameproduct = "Analyser Sweden";
-    const url = `https://modern-lab-alep.onrender.com/${nameproduct}`; 
+    const url = `/${nameproduct}`; 
     setTimeout(() => {
         window.location.href = url;
     }, 300);
 }
     function analysergermany() {
         const nameproduct = "Analyser Germany";
-        const url = `https://modern-lab-alep.onrender.com/${nameproduct}`;
+        const url = `/${nameproduct}`;
         setTimeout(() => {
             window.location.href = url;
         }, 300);
     }
     function analyserchinese() {
         const nameproduct = "Analyser chinese";
-        const url = `https://modern-lab-alep.onrender.com/${nameproduct}`;
+        const url = `/${nameproduct}`;
         setTimeout(() => {
             window.location.href = url;
         }, 300);
     }
     function mezan() {
         const nameproduct = "ميزان دقيق";
-        const url = `https://modern-lab-alep.onrender.com/${nameproduct}`;
+        const url = `/${nameproduct}`;
         setTimeout(() => {
             window.location.href = url;
         }, 300);

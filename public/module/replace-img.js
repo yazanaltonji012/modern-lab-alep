@@ -1,4 +1,3 @@
-
 function heart1() {
     var images = document.getElementById(`img3-2-1`);
     images.src="heart-fill.png";
@@ -126,4 +125,16 @@ function completeACH() {
 function completeMZN() {
     let text = "ميزان دقبق"
     createmsg(text)
+}
+function msgprod(params) {
+    let a =document.getElementById("link");
+    let currentPath = window.location.pathname;
+
+    // تقسيم المسار إلى أجزاء  
+    let pathSegments = currentPath.split('/');
+
+    // الحصول على الجزء الأخير من المسار  
+    let lastSegment = pathSegments[pathSegments.length - 1];
+    a.href = `https://api.whatsapp.com/send/?phone=+963966697577&text=About+${lastSegment}&type=phone_number&app_absent=0`
+a.click();
 }

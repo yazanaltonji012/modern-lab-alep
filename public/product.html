@@ -25,7 +25,6 @@ a{
 	background: white;
 	padding: 5px 15px;
 	box-shadow: 0px 5px 10px rgb(0, 0, 0.2);
-	border-radius: 12px;     
     align-items: center;
     justify-content: space-evenly;
 }
@@ -116,13 +115,13 @@ opacity: 90%;
             height: 400px;
             box-shadow: 1px 1px 5px rgb(0, 0, 1);
         }
-        #img1,#img2,#img3,#img-video{
+        #img1,#img2,#img3,#img-video,#img4{
             padding: 5px;
             margin: 5px;
             border-radius: 10px;
             box-shadow: 1px 1px 5px rgb(0, 0, 1);
         }
-        #img1:hover,#img2:hover,#img3:hover,#img-video:hover{
+        #img1:hover,#img2:hover,#img3:hover,#img4:hover,#img-video:hover{
             box-shadow: 2px 2px 10px royalblue;
             transform: scale(1.1);
             cursor: pointer;
@@ -284,8 +283,9 @@ margin: 5px;
             <h2 style="padding:3px; font-size:35px; color:royalblue; margin:30px; font-weight: 600 ; font-family:'Roboto', sans-serif;" id="price" align="center">Loading...SP</h2>
         <div class="bttn-prodct">
         <div>
-            <img src="whatsapp.png" onclick="prod()" id="img3-1" width="35px" height="30px">
+            <img src="whatsapp.png" onclick="msgprod()" id="img3-1" width="35px" height="30px">
             <h4 align="center" style="margin : 3px;">محادثة</h4>
+            <a href="#" id="link"></a>
         </div>
         <div>
             <img src="heart.png" id="img3-2-1" onclick="heartp()" alt="herat" width="35px" height="30px">
@@ -331,7 +331,7 @@ margin: 5px;
 <script src="./module/location.js"></script>
 <script src="./module/container.js"></script>
 <script src="./module/replace-img.js"></script>
-<script src="./module/share.js"></script>
+<script src="./module/shareproduct.js"></script>
 <script>
     // الحصول على المسار الحالي  
     let currentPath = window.location.pathname;

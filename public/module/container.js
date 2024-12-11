@@ -13,9 +13,10 @@
         let img0 = document.getElementById("img1")
         let img1 = document.getElementById("img2")
         let img2 = document.getElementById("img3")
+        let img3 = document.getElementById("img4")
         let imgmain = document.getElementById("img")
         let imgvideo = document.getElementById("img-video")
-        let imgs = [img0,img1,img2,imgvideo]
+        let imgs = [img0,img1,img2,img3,imgvideo]
             img0.addEventListener("click",()=>{
              for (const i of imgs) {
                 i.classList.remove("selected")
@@ -37,6 +38,13 @@
              imgs[2].classList.add("selected")
              
              imgmain.src = img2.src
+           })
+           img3.addEventListener("click",()=>{
+               for (const i of imgs){
+                   i.classList.remove("selected")
+               }
+               imgs[3].classList.add("selected")
+               imgmain.src = img2.src
            })
            imgvideo.addEventListener("click",()=>{
             for (const i of imgs) {
