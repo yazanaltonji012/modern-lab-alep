@@ -11,6 +11,11 @@ a{
 	text-decoration: none;
 }
 .nav-p{
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	margin: 0px;
+	top: 0;
 	display: flex;
 	flex-flow: row wrap-reverse;
 	background: white;
@@ -199,6 +204,7 @@ color: black;
 animation-name: search;
 animation-duration: 2s;
 font-size: 16px;
+border-radius: 20px;
 }
 @keyframes search{
 from{
@@ -310,7 +316,7 @@ height: 200px;
 .name{
 font-family:'Roboto', sans-serif;
 line-height: 1.0;
-font-size: 20px;
+font-size: 22px;
 font-weight: 300;
 color: black;
 }
